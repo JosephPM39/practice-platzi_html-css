@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: purple;
+  /* Este estilo no se aplicará porque el selector de etiqueta tiene menor especificidad que el ID */
+  font-family: serif;
+  margin-bottom: 10px;
+}
+
+#page-title {
+  /* Este estilo predomina a los de selectores por etiqueta y clase */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  font-size: 18px;
+  /* Este estilo no se aplicará porque el selector de clase tiene menor especificidad que el de Id */
+  font-family: monospace;
+}
+
+#main-nav {
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+/* Para mayor especificidad, podemos llamar de esta forma, significa, todos los li que estén dentro de #main-container */
+#main-nav li {
+  display: inline-block;
+}
+
+#main-nav a:nth-child(1) {
+  color: white;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+/* Este estilo no se aplicará porque el elemento ya posee un estilo embebido */
+#main-nav .enterprise {
+  background-color: red;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Especificidad demo</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 id="page-title" class="title">Title</h1>
+    <nav>
+      <ul id="main-nav" class="nav">
+        <li><a href="">Home</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="">Blog</a></li>
+        <!-- Este estilo embebido predominará a cualquier otro ya sea por selector id, clase o etiqueta -->
+        <li><a href="" style="background-color: orange;" class="enterprise">Enterprise</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+</html>
