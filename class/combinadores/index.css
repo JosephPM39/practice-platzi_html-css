@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+/* Hermano adyacente o cercano (adjacent siblings)
+Se aplicará a todas las etiquetas p que estén cerca por debajo de un h2 */
+h2 + p {
+  color: red;
+}
+
+/* Hermano general (General sibling)
+se aplicará a toda etiqueta p que en su mismo nivel jeráquico exista un hermano de etiqueta H3 */
+h3 ~ p {
+  color: red;
+}
+
+/* Hijo (child)
+Se aplicará a toda etiqueta p que sea hija directa de la etiqueta div */
+div > p {
+  color: red;
+}
+
+/* Descendiente (descendant)
+Se aplicará a toda etiqueta p que sea desenciente de la etiqueta section */
+section p {
+  color: red;
+}
