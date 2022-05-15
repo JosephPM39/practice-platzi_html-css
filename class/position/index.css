@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  border: 2px black dotted;
+  display: inline-block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.box {
+  display: inline-block;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+/* Es la posición por defecto, se basa en simplemente estar integrado dentro
+de los demás elementos de html, además que puede ser afectado por los demás elementos */
+.parent .box:nth-child(1) {
+  position: static;
+}
+
+/* A diferencia de absolute, puede moverse sobre otros elementos,
+pero sin perder su posición original */
+.parent .box:nth-child(2) {
+  background-color: green;
+  position: relative;
+  bottom: -50px;
+}
+
+/* Esta propiedad adicionalmente de funcionar como absolute, se queda fijo el elemento en la
+pantalla, exactamente en la posición que se haya especificado de forma superpuesta */
+.parent .box:nth-child(3) {
+  background-color: purple;
+  position: fixed;
+  top: 20px;
+  left: 200px;
+}
+
+/* Se superpone sobre los demás en terminos de posición, no obstante, puede requerirse de la
+propiedad z-index para determinar su prioridad de renderizado sobre otros elementos */
+.parent .box:nth-child(4) {
+  background-color: blue;
+  position: absolute;
+  top: 20px;
+  left: 300px;
+}
+
+/* Es una combinación de fixed con absolute, la diferencia es que este elmento se mueve junto
+al scroll, pero cuando se topa con los límites del su contenedor, se convierte en fixed
+(por decirlo de alguna forma). Para que funcione según algún "límite del viewport", es necesario
+asignar adicionalmente una declaración correspondiente por cada límite deseado
+(left, top, rigth, bottom) */
+.parent .box:nth-child(7) {
+  background-color: yellow;
+  position: sticky;
+
+  /* con estas declaraciones adicionales se logra que el elemento sea sticky según el viewport
+  y no por su contenedor */
+  left: 500px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
