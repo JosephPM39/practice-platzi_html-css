@@ -1,0 +1,26 @@
+main {
+  background-color: gray;
+  /* Esta medida tomará el 100% de espacio que disponga de su contendor */
+  width: 100%;
+  /*
+  mientras que esta otra medida, será absoluta y solo tomará 200px en todo caso,
+  incluso si la pantalla no posee el espacio, generará un scroll para el espacio faltante
+  (overflow)
+  */
+  height: 200px;
+}
+
+/* Medida absoluta */
+.px {
+  font-size: 18px;
+}
+
+/* Tomará como medida una porción de la medida absoluta que se hereda de la etiqueta html
+en otras palabras, la etiqueta html posee un font-size de 16px por defecto, y al aplicar
+en este caso acá un porcentaje del 50%, el elemento con la clase porcentaje, tomará 8px
+para su font-size
+*/
+.procentaje {
+  font-size: 50%;
+}
+

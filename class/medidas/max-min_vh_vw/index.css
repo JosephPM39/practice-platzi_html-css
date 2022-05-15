@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  /* Estas propiedades nos permiten ajustar a según el tamaño del viewport */
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+}
+
+section {
+  width: 80%;
+  /* la utilidad de min-width es establecer un break point para que el elemento
+  se detenga de decrecer */
+  min-width: 320px;
+  /* //El max width permite establecer hasta donde puede crecer el contenedor */
+  max-width: 500px;
+  /* Al establecer esta declaración, decimos que el elemento puede crecer más de 500px
+  pero no ser menor a ese tamaño, esto permite que el elmento crezca con su contenido */
+  min-height: 500px;
+  /* esta declaración nos puede servir para centrar el elemento, puesto decimos en ella
+  que en el eje vertical sea 0 y en el eje horizontal que calcule el espacio disponiple
+  para aplicar un margen que rellene todo lo disponible */
+  margin: 0 auto;
+  background-color: skyblue;
+}

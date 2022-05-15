@@ -1,0 +1,26 @@
+/* Probando medidas: EM */
+
+/* EM = es un acronimo de elemento y lo que hace es tomar
+el tamaño de fuente que tenga el padre directo o el padre que poseea
+la declaración, en la jerarquía sucesivamente hacia arriba
+(podría ser hasta "el abuelo o tatara tatara ... abuelo") ejemplo: */
+
+/* El padre posee un tamaño de 20px para la fuente */
+.element-container {
+  font-size: 20px;
+}
+
+/* El hijo tomará como 1em = 20px del padre, así que 2em serían 40px */
+.text-container {
+  font-size: 2em;
+}
+
+/* Como em toma la medida del primer padre directo que posea la pripiedad,
+en este caso no serán 40px, puesto tomará como referencia a 1em = ( 2em = 40px)
+del padre anterior que es .text-container dando como resultado 1em = 40px y 2em = 80px */
+/* OJO: al tener anidados elementos que coincidan con este mismo selector, se irá
+propagando este efecto de aumento de em en cada elemento hijo, hasta el punto de
+hacerse gigantesco*/
+.text-container div {
+  font-size: 2em;
+}

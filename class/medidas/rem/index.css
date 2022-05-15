@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* REM toma como referencia no el padre directo, si no el padre root, que sería la etiqueta
+html, de este modo REM siempre tendrá un valor relativo a la etiqueta html, no por otros
+padres intermedios */
+
+html {
+  /* setear a 62.5% el font-size de la etiqueta root,
+  permite que cada rem equivalga a 10px, osea 1rem = 10px,
+  esto nos permite evitarnos calcular de forma extraña cuantos
+  píxeles valdrá rem */
+  font-size: 62.5%;
+}
+
+/* REM ignora (como se dijo antes) los padres intermedios */
+.element-container {
+  font-size: 20px;
+}
+
+/* por lo cual, hacer este tipo de selectores en los cuales es posible
+tener elementos anidados, no dará el problema de aumento recursivo de la referencia
+de la medida, como si pasaba con em */
+.text-container div {
+  font-size: 2rem;
+}
+
