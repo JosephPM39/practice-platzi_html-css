@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  border: 0.3rem solid black;
+  /* Este tipo de display generará que todos los hijos de este contenedor
+   posean una especie de display inline-block sin necesidad de indicarselos
+   además de darles propiedades responsive */
+  display: flex;
+  /* Esta propiedad indica la dirección para ordenar los elementos,
+  de no indicarse, se tomará por defecto flex-direction: row; */
+  flex-direction: row-reverse;
+  /* Esta propiedad permite: si los elementos no caben en el viewport horizontal,
+  en lugar de encoger su ancho, se enviarán a una segunda fila horizontal */
+  flex-wrap: wrap;
+  /* esta propiedad permite darle un justificado a los elementos, en este caso centrado,
+  pero existen más propiedades como space-between (espacio entre elementos) */
+  justify-content: center;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+}
+
+.box:nth-child(1) {
+  background-color: blue;
+}
+
+.box:nth-child(2) {
+  background-color: red;
+}
+
+.box:nth-child(3) {
+  background-color: green;
+}
+
+.box:nth-child(4) {
+  background-color: orange;
+}
+
+.box:nth-child(5) {
+  background-color: purple;
+}
+
+.box:nth-child(6) {
+  background-color: yellow;
+}
