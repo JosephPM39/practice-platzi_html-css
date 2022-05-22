@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  border: 0.3rem solid black;
+  height: 50vh;
+  display: flex;
+  /* Esta propiedad permite alinear los elementos en el eje opuesto a flex-direction */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+}
+
+.box:nth-child(1) {
+  background-color: blue;
+  /* Esta propiedad permite que el elemento rellene el espacio sobrante en el contenedor */
+  flex-grow: 1;
+}
+
+.box:nth-child(2) {
+  background-color: red;
+  /* Su valor determina la porción del espacio que le corresponde ante otros elementos
+  con la misma propiedad, entre mayor el número
+  rayor espacio asignado */
+  flex-grow: 10;
+}
+
+.box:nth-child(3) {
+  background-color: green;
+  /* está propiedad se le asigna a los elementos hijos, no al padre, permite dar como un
+  número identificativo el cual le indicará al contendor padre (quien posee la propiedad flex)
+  como ordenar los elementos hijos  */
+  order: 5;
+}
+
+.box:nth-child(4) {
+  background-color: orange;
+}
+
+.box:nth-child(5) {
+  background-color: purple;
+  order: 2;
+}
+
+.box:nth-child(6) {
+  background-color: yellow;
+}
