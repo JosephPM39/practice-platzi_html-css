@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Las variables en css se declaran usando la pseudoclase :root,
+en la cual estableceremos las variables y su valor */
+:root {
+  --primary-color: #003476;
+  --secondary-color: #b4d2f7;
+  --font: 1.8rem;
+  --title-header-font: 4rem;
+  --max-width: 100vw;
+}
+/* Nota: una forma recomendada de nombrar a las variables es con "--" al inicio y en lugar de espacios
+o barras bajas ("_"), usar "-" */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  width: var(--max-width);
+  height: 15vh;
+  /*Antes: background-color: #003476; */
+  /* Usando las variables: para llamar una variable
+  basta con usar la función var() y pasarle por parámetro
+  el nombre de la variable */
+  background-color: var(--primary-color);
+}
+
+main {
+  width: var(--max-width);
+  height: 70vh;
+  font-size: var(--font);
+  /*Antes: color: #003476;*/
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: var(--title-header-font);
+}
+
+footer {
+  width: var(--max-width);
+  height: 15vh;
+  /* Antes: background-color: #b4d2f7; */
+  background-color: var(--secondary-color);
+}
